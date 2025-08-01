@@ -741,8 +741,8 @@ class CrossAttention(nn.Module):
         self.out_proj = nn.Conv2d(d_model, in_channels_q, kernel_size=1)
 
     def forward(self, q, kv):
-        print(f"q shape: {q.size()}")
-        print(f"kv shape: {kv.size()}")
+        # print(f"q shape: {q.size()}")
+        # print(f"kv shape: {kv.size()}")
         batch_size, C_q, H, W = q.size()
         _, C_kv, _, _ = kv.size()
 
